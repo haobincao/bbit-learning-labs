@@ -66,8 +66,6 @@ class mqConsumerInterface:
         #Print message (The message is contained in the body parameter variable)
         print(body.decode("utf-8"))
 
-        self.__del__()
-
         pass
 
     def startConsuming(self) -> None:
