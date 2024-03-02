@@ -22,7 +22,7 @@ class mqConsumer(mqConsumerInterface):
         # Establish Channel
         self.channel = self.connection.channel()
         # Create the exchange if not already present
-        self.exchange = self.channel.exchange_declare(exchange=self.exchange_name)
+        self.exchange = self.channel.exchange_declare(exchange=self.exchange_name, exchange_type="topic")
         # Create Queue if not already present
         self.queue = self.channel.queue_declare(queue=self.queue_name)
 
